@@ -1,0 +1,87 @@
+{% extends 'serviceApp/layout/base.html'%}
+{% load static %}
+
+{% block slider_content %}
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+      {%for item in len_list%}
+        <button style="background:#0062ff;width:10px;height:0px;" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="{{item}}" class="active" aria-current="true" aria-label="Slide 1"></button>
+      {%endfor %}
+    </div>
+
+    <div class="carousel-inner">
+      {%for item in slideshow_list%}
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img class="imgslide" src="{{item.slid_image.url}}">
+        </div>
+      {%endfor %}
+    </div>
+
+    <div class="shadow"> 
+    </div> 
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden" >Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div>
+
+{%endblock slider_content%}
+
+{%block content%}
+<section class="container  text-center wow fadeIn " data-wow-duration="1500ms" >
+ <span class="downloadWorld">
+    <span style="color:#0062ff;">Our&nbsp;</span><span>Professions</span>
+    <img class="img2" src="{% static 'img/service.png' %}">
+  </span>
+
+   <hr class="line container title text-center wow fadeIn" style="margin:0px">
+
+  <div class="servicess" >
+
+    <div class="container">
+
+      <div class="slide-container" >
+        <div class="slide-content">
+          <ul class="cards p-3 m-0">
+            {%for item in category_list%}
+              <li>
+                <a href="{% url 'show-service'  item.id %}" class="card" >
+                  <img src="{{item.cat_image.url}}" class="card__image" alt="" />
+                  <div class="card__overlay1">
+                    <div class="card__header1">
+                      <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+                      <div class="card__header-text">
+                        <h3 class="card__title">{{item.cat_name}}</h3>
+                      </div>
+                    </div>
+
+                      <p class="card__description">{{item.cat_details}}</p>
+                  </div>
+                </a>
+              </li>
+            {%endfor %}
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+{% endblock content%}
+
+
+
+
+
+
+
+
+

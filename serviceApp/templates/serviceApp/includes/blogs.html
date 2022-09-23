@@ -1,0 +1,53 @@
+{%load static%}
+
+
+<section class="timeline-carousel">
+
+       <div class="container">
+      <div class="row">
+         <div class="col-8 offset-2 text-center mb-5">
+            <p class="lead text-muted" style="font-family: Libre Franklin, sans-serif; font-weight:bold">From Our Blog
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke="#26abe3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+   <path d="M7 8h10"></path>
+   <path d="M7 12h10"></path>
+   <path d="M7 16h10"></path>
+</svg>
+
+            </p>
+                     <h1 class="sc_item_subtitle">Recent Articles</h1>
+
+         </div>
+      </div>
+   </div>
+
+
+
+    <div class="timeline-carousel__item-wrapper" data-js="timeline-carousel">
+
+         {% for item in blog_list %}
+
+      <!--Timeline item-->
+      <div class="timeline-carousel__item" >
+         <div class="timeline-carousel__image">
+            <div class="media-wrapper media-wrapper--overlay" style="background: url({{item.blog_img.url}}) center center; background-size:cover;"></div>
+         </div>
+         <div class="timeline-carousel__item-inner">
+            <span class="year">{{item.cat_type}}</span>
+            <span class="month">{{item.blog_date}}</span>
+            <p>{{item.blog_title}}</p>
+            <a href="{% url 'view-blog'  item.id %}" class="read-more">Read more</a>
+         </div>
+      </div>
+      <!--/Timeline item-->
+
+    {% endfor %}
+
+
+
+
+
+   </div>
+</section>

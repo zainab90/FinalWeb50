@@ -1,0 +1,50 @@
+{% extends 'serviceApp/layout/base2.html'%}
+{% load static %}
+
+{% block service_content%}
+
+<div class="serviceInfo">
+  <h1>{{ser_obj.cat_name}}</h1>
+<!--  <hr class="line container title text-center wow fadeIn">-->
+<!--  <h4>{{ser_obj.cat_details}}</h4>-->
+</div>
+
+<h1 class="downloadWorld">
+  <span style="color:#0062ff;">Our&nbsp;</span><span>Services</span>
+  <img class="img2" src="{% static 'img/repair-tool.png' %}">
+</h1>
+
+<hr class="line container title text-center wow fadeIn">
+
+<div class="servicess" > 
+  <div class="container">
+    <div class="slide-container" >
+      <div class="slide-content">
+        <ul class="cards">
+          {%for item in service %}
+            <li>
+              <a href="#" class="card">
+                <img src="{{item.serv_Img.url}}" class="card__image" alt="" />
+                <div class="card__overlay">
+                  <div class="card__header">
+                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+                    <div class="card__header-text">
+                      <h3 class="card__title">{{item.serv_name}}</h3>
+                    </div>
+                  </div>
+                  <p class="card__description">{{item.serv_details}}</p>
+                </div>
+              </a>
+            </li>
+          {% empty %}
+    <li class="text-center fs-4 fw-bold text-danger">Sorry, no Services Belong to {{ser_obj.cat_name}} .</li>
+
+          {%endfor %}
+        </ul>
+      </div>
+    </div> 
+  </div>
+</div>
+
+
+{%endblock service_content%}

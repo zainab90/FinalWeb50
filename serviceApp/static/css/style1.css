@@ -1,0 +1,160 @@
+/* ======= services detals =======  */
+
+.card{
+position :relative;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    background : #fff;
+    border : 4px solid #fff;;
+
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* border: black solid 4px; */
+  display: block;
+  height: 320px;
+  width: 300px;
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+  transition: 0.2s ease-in;
+}
+.slide-container{
+/* max-width : 2120px; */
+width : 100%;
+/* background-image: linear-gradient(43deg, rgb(224, 228, 250) 0%, #f3f3f3 46%, #dae8ff 100%); */
+}
+:root {
+  --surface-color: #fff;
+  --curve: 12;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  /* margin: 4rem 5vw; */
+  padding: 10px;
+  list-style-type: none;
+  margin:10px
+}
+.card__image {
+  width: 100%;
+  height: auto;
+}
+
+.card__overlay1 {
+  height: 40%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-radius: calc(var(--curve) * 1px);
+  background-color: var(--surface-color);
+  overflow: hidden;
+  /* transform: translateY(100%);
+  transition: .2s ease-in-out; */
+}
+
+.card__overlay1 p {
+  text-align: center;
+}
+
+.card__header1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  padding: 1em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;
+  background-color: var(--surface-color);
+  /* transform: translateY(-100%);
+  transition: .2s ease-in-out; */
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: var(--surface-color);
+  /* d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z"); */
+}
+
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.card__title {
+  font-size: 1.5em;
+  margin-bottom: -3px;
+  color: #0062ff;
+}
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-family: "MockFlowFont";
+  font-size: .8em;
+  color: #D7BDCA;
+}
+.card__status {
+  font-size: .8em;
+  color: #D7BDCA;
+}
+.card__description {
+  padding: 0 0em 2em;
+  margin: 0;
+  color: #0062ff;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-radius: calc(var(--curve) * 1px);
+  background-color: var(--surface-color);
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: .2s ease-in-out;
+}
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card:hover {
+  box-shadow: 0px 0px 26px 1px rgba(0,98,255,0.76);
+  -webkit-box-shadow: 0px 0px 26px 1px rgba(0,98,255,0.76);
+  -moz-box-shadow: 0px 0px 26px 1px rgba(0,98,255,0.76);
+  transition: 0.4s 0.1s ease;
+  transform: scale(1.1);
+}
+
+
+  /* ======= End services detals =======  */

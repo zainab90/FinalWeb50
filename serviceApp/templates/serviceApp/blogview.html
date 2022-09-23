@@ -1,0 +1,174 @@
+{% extends 'serviceApp/layout/base2.html'%}
+{% load static %}
+
+{% block blog_content%}
+<div class="container" >
+    <div class="row">
+    <div class="col-md-12" style="
+
+margin:0;
+padding:0;
+ position: relative;
+  height: 38rem;
+    width: 100%;
+    text-align: center;
+    color: white;
+    display:flex;
+    padding-top:200px;
+    overflow: hidden;
+    background: #A29A96;  /* fallback for old browsers */
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{blog_obj.blog_img.url}});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+
+
+
+">
+        <div class="content_wrap">
+
+	<div class="post_meta post_meta_categories">
+ <span class="post_meta_item post_categories">
+ <a href="https://electrician.dom.themerex.net/category/maintenance/" rel="category tag">
+                {{blog_obj.cat_type}}</a>
+ </span>
+    </div>
+
+       <h1 class="post_title entry-title">{{blog_obj.blog_title}}</h1>
+       <div class="post_meta post_meta_other">
+           <a class="post_meta_item post_author" rel="author" href="https://electrician.dom.themerex.net/author/trx_admin/">
+</a>
+           <span class="post_meta_item post_date">{{blog_obj.blog_date}}</span>
+<!--           <a  href="https://electrician.dom.themerex.net/the-importance-of-surge-protection-for-your-home/#respond" class="post_meta_item post_meta_comments icon-comment-light inited">-->
+<!--               <span class="post_meta_number"  ></span>-->
+<!--               <span class="post_meta_label">-->
+<!--                   <svg  xmlns="http://www.w3.org/2000/svg" class="icon" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="currentColor" stroke-linecap="round" stroke-linejoin="round">-->
+<!--   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>-->
+<!--   <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428m0 0a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>-->
+<!--</svg></span>-->
+<!--           </a>-->
+       </div>
+   </div>
+    </div>
+
+
+  </div>
+
+    <div class="row article-bcg">
+<div class="col-md-3"></div>
+        <article class="col-md-6 article-content">
+
+            <p>{{blog_obj.blog_content}}</p>
+
+
+        </article>
+<div class="col-md-3"></div>
+
+
+    </div>
+    <div class="row article-bcg">
+        <div class="col-md-3"></div>
+        <blockquote class="trx_addons_blockquote_style_1 col-md-6">
+            <span >
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-quote" width="26" height="26" viewBox="0 0 24 24" stroke-width="2" stroke="#2850be" fill="#2850be" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M10 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5"></path>
+   <path d="M19 11h-4a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h3a1 1 0 0 1 1 1v6c0 2.667 -1.333 4.333 -4 5"></path>
+</svg>
+            </span>
+                <p>{{blog_obj.blog_quote}} </p>
+</blockquote>
+        <div class="col-md-3"></div>
+    </div>
+
+
+
+{% if vid_name %}
+        <div class="row article-bcg">
+         <div class="col-md-3"></div>
+<h5 class="col-md-6">Creative Video to every project</h5>
+<div class="col-md-3"></div>
+     </div>
+
+    <div class="row article-bcg">
+<div class="col-md-3"></div>
+        <div class="col-md-6 article-content pt-0">
+
+            <p>{{blog_obj.blog_vid_content}}</p>
+
+
+        </div>
+<div class="col-md-3"></div>
+
+
+    </div>
+     <div class="row article-bcg">
+         <div class="col-md-3"></div>
+    <div class="col-md-6 wp-block-embed__wrapper">
+<iframe title="Electrician Promo Video" width="1290" height="726" src="https://www.youtube.com/embed/{{vid_name}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="dom_resize trx_addons_resize" data-last-width="630" style=" width:100%;height: 355px;"></iframe>
+</div>
+         <div class="col-md-3"></div>
+     </div>
+
+    {% endif %}
+
+
+<div class="row article-bcg">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 post_meta post_meta_single">
+
+
+
+            <span class="post_meta_item">
+                <span class="socials_share  socials_wrap">
+                    <span class="social_items">
+                        <a class="social_item social_item_popup" href="//twitter.com/intent/tweet?text={{blog_obj.blog_title}}&amp;url=http://127.0.0.1:8000/serviceApp/ViewBlog/{{blog_obj.id}}"
+                           data-link="//twitter.com/intent/tweet?text={{blog_obj.blog_title}}&amp;url=http://127.0.0.1:8000/serviceApp/ViewBlog/{{blog_obj.id}}"
+                           data-count="twitter-new">
+                            <span class="social_icon social_icon_twitter-new" style="">
+                                <span class="icon-twitter-new"><svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"></path>
+</svg></span>
+                            </span>
+                        </a>
+                        <a class="social_item social_item_popup"
+                           href="//www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:8000/serviceApp/ViewBlog/{{blog_obj.id}}"
+                           data-link="//www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:8000/serviceApp/ViewBlog/{{blog_obj.id}}"
+                           data-count="facebook-1">
+
+                          <span class="social_icon social_icon_facebook" style="">
+                                <span class="icon-twitter-new"><svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="0.5" stroke="#fff" fill="#fff" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+</svg></span>
+                            </span>
+                        </a>
+                        <a class="social_item" href="mailto:test@fwe.com?subject={{blog_obj.blog_title}}&amp;body={{blog_obj.blog_content}}" target="_blank" data-count="share-email">
+                           <span class="social_icon social_icon_email" style="">
+                                <span class="icon-twitter-new"><svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+   <polyline points="3 7 12 13 21 7"></polyline>
+</svg></span>
+                            </span>
+                        </a>
+                    </span>
+                </span>
+            </span>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+{%endblock blog_content%}

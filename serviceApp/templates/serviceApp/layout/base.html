@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" >
+  {% load static %}
+
+  {% include 'serviceApp/includes/header.html'%}
+
+  <body >
+
+    {% include 'serviceApp/includes/navbar.html' %}
+    
+    <div id="home">
+      {% block slider_content %}
+    
+      {%endblock slider_content%}
+    </div>
+
+    <section class="section about-2 padding-0"  id="about">
+     {% include 'serviceApp/includes/aboutus.html' %}
+    </section>
+
+    <div class="servicessh1 serv-section" id="servicess">
+      {% block content %}
+      {%endblock content%}
+
+    </div>
+
+
+
+     {% include 'serviceApp/includes/blogs.html' %}
+
+
+    <section class="section about-2 padding-0 downloadWorld1"  id="download">
+      {% include 'serviceApp/includes/download.html' %}
+    </section>
+
+    {% include 'serviceApp/includes/footer.html' %}
+
+    <button id="scroll-top">
+     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="45" height="45" viewBox="0 0 24 24" stroke-width="2" stroke="#fff" fill="#0062ff" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <circle cx="12" cy="12" r="9"  stroke="#0062ff" ></circle>
+   <line x1="12" y1="8" x2="8" y2="12"></line>
+   <line x1="12" y1="8" x2="12" y2="16"></line>
+   <line x1="16" y1="12" x2="12" y2="8"></line>
+</svg>
+    </button>
+
+    {% include 'serviceApp/includes/scripts.html' %}
+
+    {% block extra_script %}
+    {%endblock extra_script%}
+  </body>
+
+</html>

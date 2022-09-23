@@ -1,0 +1,42 @@
+{%load static%}
+<header>
+  <nav>
+    <img id="ham-menu" src="{% static 'img/menu.png' %}">
+    <a href="#home" id="logo" style="text-decoration: none;font-family:'Berkshire Swash',cursive !important; text-shadow: -3px 4px 9px rgba(0,0,0,0.6);"><img src="{% static 'img/logo.jpg' %}" class="logoimg">Seven Professions</a>
+    <ul id="nav-bar">
+
+      <li>
+        <a href="{% url 'index'%}" class="nav-font underline" style="text-decoration: none;" id="#homet">Home</a>
+      </li>
+
+<!--      <li>-->
+<!--        <a href="#about" class="nav-font underline" style="text-decoration: none;">About</a>-->
+<!--      </li>-->
+
+      <li>
+        <a href="#footer" class="nav-font underline" style="text-decoration: none;" >Contact</a>
+      </li>
+
+      <li class="nav-item dropdown">
+
+                <a href="#servicess" class="nav-font underline" style="text-decoration: none;" >Professions</a>
+
+
+
+<!--        <a  href="#download" class="dropdown-toggle nav-font" style="text-decoration: none;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Professions</a>-->
+<!--        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+<!--          {%for item in category_list%}-->
+<!--          <li>-->
+<!--            <a href="{% url 'show-service' id=item.id %}" class="dropdown-item">{{item.cat_name}}</a>-->
+<!--          </li>-->
+<!--          {% endfor %}-->
+<!--        </ul>-->
+      </li>
+     
+      <li>
+        <a style="font-weight : bold;font-size:20px;position:relative;top:-0.1px" class="btn btn-outline-primary" href="#download" id="Download">Download</a>
+      </li>
+      
+    </ul>
+  </nav>
+</header>
