@@ -32,7 +32,8 @@ def index(request):
     
     return render(request, 'serviceApp/MyServices.html',
                   {'category_list':category_list,
-                   'slideshow_list':slideshow_list,
+                   'first_slid':slideshow_list[0],
+                   'slideshow_list':slideshow_list[1:],
                    'len_list':len_list ,
                    'blog_list':blog_list
 
